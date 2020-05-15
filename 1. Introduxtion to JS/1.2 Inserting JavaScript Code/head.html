@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>JS in head tag</title>
+        <link rel="stylesheet" href="">
+        
+        <script>
+            // Function(event handler) needs to be defined which is called on events inside body elements
+            function trigger() {
+                let x = 5;
+                alert(typeof x);
+    
+                let element = document.getElementById("heading");
+                if(x === 5) {
+                    element.innerHTML = "True";
+                }
+                else {
+                    element.innerHTML = "False";
+                }
+            }
+        </script>
+    </head>
+    
+    <body>
+        <h1 id="heading"></h1>
+        <button onclick="trigger()">Click Me</button>
+    </body>
+
+</html>
