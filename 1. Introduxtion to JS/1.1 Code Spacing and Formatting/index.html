@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="">
+        <title>Code Spacing and Formatting</title>
+    </head>
+    
+    <body>
+        <p id="p1"></p>
+        <script type="text/javascript">
+
+            // While declaring constants always use upper case characters
+            // If creating multi-word constant seperate the words by underscore
+            const INTEREST_RATE = 0.05;
+
+            // If creating strings with long values put it in different lines using concatenating operator
+            const LONG_STRING = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,' + 
+                                ' sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+
+            // Always try to use {let} to declare variable instead of {var}
+            let element = document.getElementById("p1");
+
+            // Always declare variables on seperate lines
+            let x = 20;
+            let y = 100;
+            let z = 30;
+
+            // Use back-ticks{``} to ember variables into statement instead of using concatenation
+            element.innerHTML = `This i a long string : ${LONG_STRING}`;
+
+        </script>
+    </body>
+
+</html>
