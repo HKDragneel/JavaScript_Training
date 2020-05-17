@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>JS operators</title>
+        <link rel="stylesheet" href="">
+    </head>
+    
+    <body>
+        <script type="text/javascript">
+            let x = 10;
+
+            //Arithmetic operators
+            let add = x + 10;   //20
+            let sub = x - 5;    //5
+            let mul = x * 3;    //30
+            let div = x / 4;    //2.5
+            let mod = x % 4;    //2 (Remainder)
+
+            //Change the variable to observe the values
+            console.log(mod);
+
+            //Assignment operators
+            add += 10;   //30
+            sub -= 5;    //0
+            mul *= 3;    //90
+            div /= 4;    //0.825
+            mod %= 4;    //2 (Remainder)
+
+            //Change the variable to observe the values
+            console.log(mod);
+
+            //Increment/Decrement Operators
+            let y = ++x;    //x is incremented first then assigned to y
+            console.log(x, y);
+            y = x--;        //x is assigned to y first then decremented
+            console.log(x, y);
+
+            //Bit-wise operators
+            x = 1;              //0001
+            y = 3;              //0011
+            let and = x & y;    //0001
+            let or = x | y;     //0011
+            console.log(or);
+
+        </script>
+    </body>
+
+</html>
