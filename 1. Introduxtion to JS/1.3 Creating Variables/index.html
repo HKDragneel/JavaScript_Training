@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Varaibles in JS</title>
+        <link rel="stylesheet" href="">
+        <script>
+            function lol() {
+                //Global variable available outside functional scope also
+                m = "Global";
+
+                //Not available outside functional scope
+                var n = "Limited scope";
+
+                return true;
+            }
+            console.log(lol());
+            console.log(m);
+            console.log(n);
+        </script>
+    </head>
+    
+    <body>
+        <p id="p1">Variable declared using let: - </p>
+        <br/>
+        <p id="p2">Variable declared using var: - </p>
+        <script type="text/javascript">
+
+            //Global variable declaration (not recommended)
+            x = 5;
+
+            //Limited to the scope in which it is declared
+            let y = 4;
+            if(y === 4) {
+                let y = 10;
+                let element = document.getElementById("p1");
+                element.innerHTML += y;
+                
+                //Limited to functional scope as explained in head element script
+                var z = 'Zebra';
+
+                //Local scope and cannot be re-assigned
+                const WEEK = 7;
+                if(z === 'Zebra') {
+                    var z = 'Lion';
+                    let element = document.getElementById("p2");
+                    element.innerHTML += z;
+                }
+                console.log(`Var outside inner if block ${z}`);
+                console.log(`There are ${WEEK} days in a week.`);
+            }
+            console.log(y);
+            console.log(`Var outside outer if block ${z}`);
+        </script>
+    </body>
+
+</html>
