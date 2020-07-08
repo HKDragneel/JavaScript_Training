@@ -48,9 +48,9 @@
                 //Local scope and cannot be re-assigned
                 const WEEK = 7;
                 if(z === 'Zebra') {
-                    var z = 'Lion';
                     let element = document.getElementById("p2");
                     element.innerHTML += z;
+                    var z = 'Lion';
                 }
                 console.log(`Var outside inner if block ${z}`);
                 console.log(`There are ${WEEK} days in a week.`);
