@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="">
+        <title>Arrays in JS</title>
+    </head>
+    
+    <body>
+        <h3 id="old">JavaScript Arrays</h3>
+        <p1 id="p1"></p1>
+        <script type="text/javascript">
+            let p1 = document.getElementById('p1');
+            
+            //Declaring arrays
+            let fruits = ['apple', 'plum', 'banana', 'mango'];
+            let stuff = new Array();                                     //not recommended
+
+            for (let i=0; i<fruits.length; i++) {                       //length property gives number of items in an array
+                p1.innerHTML += `<br /> Fruit ${i+1} is ${fruits[i]}.`;
+            }
+
+            fruits.push('grape');                                       //adding new value at the end of the array
+            console.log(`Items in array after push ${fruits}`);
+            fruits.pop()                                                //removing last item from the array
+            console.log(`Items in array after pop ${fruits}`);
+            fruits.unshift('guava');                                    //adding new value at the start of the array
+            console.log(`Items in array after unshift ${fruits}`);
+            fruits.shift();                                             //removing first item from the array
+            console.log(`Items in array after shift ${fruits}`);
+
+            let pos = fruits.indexOf('banana');                         //getting index of an item in an array
+            console.log(`Fruit at ${pos+1} is ${fruits[pos]}`);
+            fruits.splice(pos, 1);                                      //removing item at a particular index
+            console.log(`Items in array after splice ${fruits}`)
+            console.log(fruits.includes('plum'));                       //checking if the element exists in given array
+            fruits.sort();                                              //sorts the array in ascending order
+            fruits.reverse();                                           //reverses the order of the array
+            console.log(fruits);
+
+            //There are 5 different ways of iterating over a loop
+            //--->while loop
+            //--->do-while loop
+            //--->for loop
+            //--->for of loop                   {as explained in section 2.4}
+            //--->forEach method
+
+            //Iterating over array items using forEach method
+            function myFruits(fruit, index, arr) {
+                console.log(`Fruit ${index+1} is ${fruit}.`);
+            }
+            fruits.forEach(myFruits);
+
+            //Multi Dimensional Arrays
+            let fruitDetails = [
+                ['apple', 'W1', 154],
+                ['grape', 'W2', 754],
+                ['plum', 'W1', 95]
+            ];
+            fruitDetails.forEach(
+                (entry, index, arr) => {p1.innerHTML += `<br />${entry[0]} is stored at ${entry[1]} and quantity is ${entry[2]}.`}
+            );
+
+        </script>
+    </body>
+
+</html>
