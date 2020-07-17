@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="">
+        <title>Conditional Statements in JS</title>
+    </head>
+    
+    <body>
+        <h3 id="old">JavaScript Conditional Statements</h3>
+        <p id="p1"></p>
+        <script type="text/javascript">
+            let p1 = document.getElementById('p1');
+            let title = 'CIO';
+
+            //If-else statements in JS
+            if (title === 'CEO') {
+                p1.innerHTML = `${title} gets a bonus`;
+            } else if (title === 'CIO') {
+                p1.innerHTML = `${title} gets a small bonus`;
+            } else {
+                p1.innerHTML = 'No Bonus';
+            }
+
+            //Ternanry operator in JS
+            console.log((title == 'CIO')?p1.innerHTML = `${title} gets a small bonus`: 'No Bonus' );
+
+            //Switch statement in JS
+            let bonus = 0.0;
+            let termExtended = true;
+
+            switch(title) {
+                case 'CEO':
+                    bonus = 10;
+                    break;
+                case 'CIO':
+                    bonus = 5.5;
+                    termExtended = false;
+                case 'CFO':
+                    bonus = 4.0;
+                    break;
+                default:
+                    bonus = 4.5
+            }
+            console.log(`${title} has been awarded a bonus of ${bonus}`);
+        </script>
+    </body>
+
+</html>

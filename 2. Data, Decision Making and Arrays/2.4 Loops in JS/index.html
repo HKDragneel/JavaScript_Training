@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="">
+        <title>JS Comparison and Logical Operators</title>
+    </head>
+    
+    <body>
+        <h3 id="old">Loops is JavaScript</h3>
+        <p1 id="p1"></p1>
+        <script type="text/javascript">
+            let p1 = document.getElementById('p1');
+
+            //for loops
+            for (let i=0; i<4; i++) {                               //Standard for loop
+                p1.innerHTML += i + ' ';
+            }
+            let obj = {
+                name: 'Alex',
+                age: 10,
+                title: 'SE'
+            }
+            for (x in obj) {                                        //for in loop iterates over properties of an object
+                p1.innerHTML += obj[x] + ' ';
+            }
+            let arr = ['apple', 'banana', 'mango'];
+            for (y of arr) {                                        //for of loop iterates through values of an iterable object
+                p1.innerHTML += y + ' ';
+            }
+
+            //while loop
+            let i = 7;
+            while (i<10) {
+                p1.innerHTML += i + ' ';
+                i++;
+            }
+
+            //do-while loop
+            do {
+                p1.innerHTML += 10*i
+            } while(i<8);
+
+            myLabel: for(let i=0; i<5; i++) {
+                for(let y=0; y<5; y++) {
+                    if(y === 3) continue myLabel;                   //continue statement with label [remove myLabel and observe the difference]
+                    p1.innerHTML += `<br /> ${i*y}`;
+                }
+            }
+        </script>
+    </body>
+
+</html>

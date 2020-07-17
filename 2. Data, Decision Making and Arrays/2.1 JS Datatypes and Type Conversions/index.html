@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="">
+        <title>JS Datatypes</title>
+    </head>
+    
+    <body>
+        <h3 id="old">JavaScript Data Types</h3>
+        <p id="p1"></p>
+        <script type="text/javascript">
+
+            let p1 = document.getElementById("p1");
+
+            // JavaScript has seven data types incorparated as defined by ECMA Script
+            let truth = true;           //boolean data type
+            let employee = null;        //null data type
+            let days = undefined;       //undefined data type
+            let x = 5;                  //number data type
+            let firstName = 'Axle';     //string data type 
+            const COLOR = 'blue';       //symbol data type
+            let vehicle = {
+                make: 'Buick',
+                color: 'Red',
+                year: 2019,
+                aboutMe: function() {
+                    return this.make + " " + this.color+ " " + this.year;
+                }
+            };                          //object data type
+
+            p1.innerHTML = vehicle.aboutMe();
+
+            //------------------------------------------------------------------------------------------------//
+
+            //Type Conversions in JavaScript
+            y = '5'
+            y = 5;
+
+            p1.innerHTML = x;                       //implicit conversion to string occurs here since engine only processes strings
+            console.log(`Type of x before assignment to html ${typeof(x)}`);                 //returns number
+            console.log(`Type of x after assignment to html ${typeof(p1.innerHTML)}`);       //returns string
+
+            let date = new Date();
+            let year = date.getFullYear();
+            console.log(`Data type of year ${typeof(year)}`);              //returns number
+
+            p1.innerHTML = year.toString();         //explicit conversion from number to string (not required)
+
+            let z = Number(true);                   //explicit conversion from boolean to number
+            console.log(`Numerical value for boolean true ${z}`);
+
+            let w = parseInt('5');
+            console.log(`Numerical value stored in the string is ${w}`);
+            w = parseInt('five');
+            console.log(`Numerical value stored in the string is ${w}`);
+        </script>
+    </body>
+
+</html>
