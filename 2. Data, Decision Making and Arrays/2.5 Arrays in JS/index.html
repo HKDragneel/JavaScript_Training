@@ -20,7 +20,7 @@
             
             //Declaring arrays
             let fruits = ['apple', 'plum', 'banana', 'mango'];
-            let stuff = new Array();                                     //not recommended
+            let stuff = new Array();                                    //not recommended
 
             for (let i=0; i<fruits.length; i++) {                       //length property gives number of items in an array
                 p1.innerHTML += `<br /> Fruit ${i+1} is ${fruits[i]}.`;
@@ -28,10 +28,13 @@
 
             fruits.push('grape');                                       //adding new value at the end of the array
             console.log(`Items in array after push ${fruits}`);
+            
             fruits.pop()                                                //removing last item from the array
             console.log(`Items in array after pop ${fruits}`);
+            
             fruits.unshift('guava');                                    //adding new value at the start of the array
             console.log(`Items in array after unshift ${fruits}`);
+            
             fruits.shift();                                             //removing first item from the array
             console.log(`Items in array after shift ${fruits}`);
 
@@ -39,10 +42,33 @@
             console.log(`Fruit at ${pos+1} is ${fruits[pos]}`);
             fruits.splice(pos, 1);                                      //removing item at a particular index
             console.log(`Items in array after splice ${fruits}`)
+            fruits.splice(1, 1, 'pear', 'watermelon', 'muskmelon');     //removing and adding elements with same function at specified index
+            console.log(fruits);
+
+            let newFruits = fruits.slice(1, 4);                         //extracting sub array based on start and end index
+            console.log(newFruits);
+            
             console.log(fruits.includes('plum'));                       //checking if the element exists in given array
+            
             fruits.sort();                                              //sorts the array in ascending order
             fruits.reverse();                                           //reverses the order of the array
             console.log(fruits);
+
+            let oldFruits = ['grapes', 'guava'];
+            let berries = ['strawberry', 'blueberry', 'mulberry'];
+
+            //concatenating arrays
+            let allFruits = oldFruits.concat(newFruits, berries, 'dragonfruit');
+            console.log(allFruits);
+
+            //spread operator (used to unpack arrays)
+            allFruits = [...oldFruits, ...newFruits, 'dragonfruit', ...berries];
+            console.log(allFruits);
+
+            let modifiedFruits = allFruits.map( function(fruit) {       //map function processes array values by passing each value to callback function
+                return fruit.toUpperCase();
+            });
+            console.log(modifiedFruits);
 
             //There are 5 different ways of iterating over a loop
             //--->while loop
