@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="">
+        <title>Adding event handlers</title>
+    </head>
+    
+    <body>
+        <h3 id="old">Events and event handlers</h3>
+        <p id="p1">This is paragraph 1</p>
+        <p id="p2">This is paragraph 2</p>
+        <p id="p3">This is paragraph 3</p>
+
+        <!-- event handlers can be added to any HTML elements using any of these 3 approaches -->
+        <button onclick="usingEventHandlerAttribute()">
+            Button 1
+        </button>
+        <button id="button2">
+            Button 2
+        </button>
+        <button id="button3">
+            Button 3
+        </button>
+
+        <script type="text/javascript">
+
+            function usingEventHandlerAttribute() {
+                document.getElementById("p1").innerHTML += ': Click event happened';
+            }
+            
+            // handling event using onclick property 
+            let button2 = document.getElementById("button2");
+            button2.onclick = function() {
+                document.getElementById("p2").innerHTML += ': Click event happened';
+            };
+            
+            // handling event using addEventListener method
+            document.getElementById("button3").addEventListener('click', () => {
+                document.getElementById("p3").innerHTML += ': Click event happened';
+            });
+
+        </script>
+    </body>
+
+</html>
