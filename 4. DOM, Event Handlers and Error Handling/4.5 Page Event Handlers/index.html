@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="">
+        <title>Page event handlers</title>
+
+        <style>
+            .divClass {
+                background-color: paleturquoise;
+                height: 10000px;
+                width: 10000px;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function handleOnLoad(event) {
+                console.log('Page Loaded');
+                console.log(event);
+            }
+            function handleOnUnload(event) {
+                console.log('Page Unloaded');
+            }
+            function handleOnScroll(event) {
+                console.log(`Scrolling: ${window.scrollX}, ${window.scrollY}`);
+            }
+            function handleResize(event) {
+                console.log(`Window Resized >> Height: ${window.innerHeight}, Width ${window.innerWidth}`);
+            }
+        </script>
+    </head>
+    
+    <body
+        onload="handleOnLoad(event)"
+        onunload="handleOnUnload(event)"
+        onscroll="handleOnScroll(event)"
+        onresize="handleResize(event)"
+    >
+
+        <div class="divClass"></div>
+
+    </body>
+
+</html>

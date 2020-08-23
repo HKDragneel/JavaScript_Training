@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="">
+        <title>Keyboard event handlers</title>
+
+        <style>
+            .keyboardEventHandlers {
+                background-color: paleturquoise;
+            }
+        </style>
+
+        <script>
+            function onKeyDown(event) {
+                console.log(`key down event detected: ${event}`);
+                console.log(`the key was: ${event.key}`);
+            }
+            function onKeyUp(event) {
+                console.log(`key up event detected: ${event}`);
+                console.log(`the key was: ${event.key}`);
+            }
+            function onKeyPress(event) {
+                console.log(`key press event detected: ${event}`);
+                console.log(`the key was: ${event.key}`);
+            }
+        </script>
+    </head>
+    
+    <body>
+
+        <input  type="text"
+                class="keyboardEventHandlers"
+                onkeydown="onKeyDown(event)"
+                onkeyup="onKeyUp(event)"
+                onkeypress="onKeyPress(event)"
+                placeholder="Keyboard event handler"
+        >
+
+    </body>
+
+</html>

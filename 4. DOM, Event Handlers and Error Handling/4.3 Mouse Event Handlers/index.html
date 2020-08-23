@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="">
+        <title>Mouse event handlers</title>
+
+        <style>
+            .mouseEventHandlers {
+                background-color: gray;
+                height: 30vh;
+                width: 40vw;
+            }
+            .innerText {
+                text-align: center;
+                padding-top: 30px;
+                color: honeydew;
+            }
+        </style>
+    </head>
+    
+    <body>
+
+        <div class="mouseEventHandlers"
+            onmouseover="console.log('The mouse is over our div')"
+            onmouseout="console.log('The mouse is no longer over our div')"
+            onmouseenter="console.log('The mouse has entered our div')"
+            onmouseleave="console.log('The mouse has left our div')"
+            onmousemove="console.log('The mouse moved while over our div')"
+            onmousedown="console.log('The mouse button was pressed down while over our div')"
+            onmouseoup="console.log('The mouse button was released while over our div')"
+            onclick="console.log('The user clicked our div')"
+            ondblclick="console.log('The user double clicked our div')"
+            >
+            <p class="innerText">Mouse Event Handlers</p>
+        </div>
+
+    </body>
+
+</html>

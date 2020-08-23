@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="">
+        <title>JS Comparison and Logical Operators</title>
+        
+        <script type="text/javascript">
+            function demo(x) {
+                "use strict";
+                var answer = 0;
+
+                try {
+                    let scores = [4, 9, 5, 7];
+                    answer = scores[x];
+                } catch {
+                    answer = 'Invalid Data!'
+                } finally {
+                    document.getElementById("p3").innerHTML = 'Finally will always execute!'
+                }
+                document.getElementById("p2").innerHTML = answer;
+            }
+        </script>
+    </head>
+    
+    <body>
+        
+        <h3 id="old">JavaScript Error Handling</h3>
+
+        <p id="p1">This is a paragraph</p>
+        
+        <p id="p2">This is another paragraph</p>
+
+        <button onclick="demo(2)">Button on-click event</button>
+
+        <p id="p3"></p>
+
+    </body>
+
+</html>
