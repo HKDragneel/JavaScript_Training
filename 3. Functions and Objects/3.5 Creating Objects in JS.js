@@ -29,6 +29,17 @@ let vehicle = {
 
 console.log(vehicle.aboutMe() + '\n' + vehicle.costPlusTax());
 
+//ES6 object literal
+let newMake = 'Toyota';
+let newModel = 'Innova';
+let newYear = 2015;
+
+let newVehicle = {newMake, newModel, newYear};
+
+for(i in newVehicle) {
+    console.log(i + ': ' + newVehicle[i]);
+}
+
 /**
  * 2. Constructor Function
  *
@@ -107,3 +118,24 @@ let advancedVehicle = Object.create(vehicle, {
 });
 console.log(advancedVehicle.aboutMe());
 
+/**
+ * There are 3 different ways of accessing object properties
+ * 
+ * 1. Dot property
+ * 2. Using square brackets
+ * 3. Object Destructuring (ES6)
+ */
+
+console.log(advancedVehicle.type);              //Dot property
+console.log(advancedVehicle['type']);           //Square bracket with property string literal
+
+//Object destructuring
+
+/* Variable names inside parantheses should be same as
+   property names*/
+let {make, color, year, cost, type} = advancedVehicle;
+console.log(make + ' ' + color + ' ' + year + ' ' + cost + ' ' + type);
+
+//alias can be given to the variables which store properties
+let {make:m, color:c1, year:y, cost:c2, type:t} = advancedVehicle;
+console.log(m + ' ' + c1 + ' ' + y + ' ' + c2 + ' ' + t);
